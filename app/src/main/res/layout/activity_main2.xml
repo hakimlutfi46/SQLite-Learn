@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:paddingHorizontal="25dp">
+
+    <TextView
+        android:id="@+id/getText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Your Text Will be Here"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="33dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/showPrivateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHOW PRIVATE DATA"
+                android:layout_weight="1"
+                app:cornerRadius="10dp"
+                android:textSize="12sp"
+                android:onClick="getPrivate"/>
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/showPublicBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHOW PUBLIC DATA"
+                android:layout_weight="1"
+                app:cornerRadius="10dp"
+                android:textSize="12sp"
+                android:onClick="getPublic"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backBtn"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BACK"
+            app:cornerRadius="10dp"
+            android:textSize="12sp"
+            android:onClick="back"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

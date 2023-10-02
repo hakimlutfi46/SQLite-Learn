@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="Add Text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="25dp"
+            android:weightSum="2">
+            
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/privateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAVE AS PRIVATE"
+                android:layout_weight="1"
+                app:cornerRadius="10dp"
+                android:onClick="saveAsPrivate"/>
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/publicBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAVE AS PUBLIC"
+                android:layout_weight="1"
+                app:cornerRadius="10dp"
+                android:onClick="saveAsPublic"/>
+
+        </LinearLayout>
+       
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewBtn"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLICK TO VIEW"
+            app:cornerRadius="10dp"
+            android:onClick="next"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
